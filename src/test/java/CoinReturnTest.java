@@ -27,18 +27,9 @@ public class CoinReturnTest {
 
 	@Test
 	public void canAddCoin() {
-		coinReturn.addCoin(coin5);
-		coinReturn.addCoin(coin5);
-		assertEquals(0.10, coinReturn.getTotal(), 0.00);
-	}
-
-	@Test
-	public void canRejectOneAndTwo() {
 		coinReturn.addCoin(coin1);
 		coinReturn.addCoin(coin2);
 		coinReturn.addCoin(coin5);
-		assertEquals(0.05, coinReturn.getTotal(), 0.00);
+		assertEquals(0.08, coinReturn.getTotal(), 0.00001);
 	}
-
-
 }

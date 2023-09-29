@@ -12,11 +12,7 @@ public CoinReturn() {
 	}
 
 	public void addCoin(Coin coin) {
-	if (coin.getValue() >= .05) {
-			this.coins.add(coin);
-	} else {
-			System.out.println("Machine does not accept one and two pence coins");
-		}
+		this.coins.add(coin);
 	}
 
 	public double getTotal() {

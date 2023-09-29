@@ -3,8 +3,9 @@ package com.codebase.machine;
 import com.codebase.products.Product;
 
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
-public class Drawer {
+public class Drawer extends ArrayList<Drawer> {
 	private ArrayList<Product> products;
 	private final Code code;
 	private double price;
@@ -20,11 +21,11 @@ public class Drawer {
 	}
 
 	public Code getCode() {
-		return code;
+		return this.code;
 	}
 
 	public double getPrice() {
-		return price;
+		return this.price;
 	}
 
 	public void addProduct(Product product) {
@@ -34,4 +35,9 @@ public class Drawer {
 	public Product removeProduct() {
 		return this.products.remove(0);
 	}
+
+//	@Override
+//	public Stream<Drawer> stream() {
+//		return super.stream();
+//	}
 }
